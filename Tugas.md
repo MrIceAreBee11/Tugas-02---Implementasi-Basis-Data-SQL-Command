@@ -57,6 +57,9 @@ CREATE TABLE Peminjaman_Buku (
 );
 
 –DESCRIBE TABLE
+
+
+
 Buku
 
 
