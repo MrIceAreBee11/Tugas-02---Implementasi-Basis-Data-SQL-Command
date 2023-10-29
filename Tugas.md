@@ -62,6 +62,8 @@
 
 *Buku*
 
+      desc buku;
+
 
 ![image](https://github.com/MrIceAreBee11/Tugas-02---Implementasi-Basis-Data-SQL-Command-/assets/121444978/a34f9841-dd30-46a8-b3b7-c5eba39579db)
 
@@ -70,12 +72,16 @@
 
 *Kategori*
 
+      desc kategori;
+      
 
 ![image](https://github.com/MrIceAreBee11/Tugas-02---Implementasi-Basis-Data-SQL-Command-/assets/121444978/251837f4-b945-4eba-ade2-6b6b09fc0108)
 
 
 
 *Anggota*
+
+      desc anggota;
 
 
 ![image](https://github.com/MrIceAreBee11/Tugas-02---Implementasi-Basis-Data-SQL-Command-/assets/121444978/5376113b-dd18-4080-8546-39cfd8b942fe)
@@ -84,12 +90,16 @@
 
 *Pustakawan*
 
+      desc pustakawan;
+
 
 ![image](https://github.com/MrIceAreBee11/Tugas-02---Implementasi-Basis-Data-SQL-Command-/assets/121444978/5a8c540b-cbee-49bd-84fe-3087f0b990d6)
 
 
 
 *Peminjaman Buku*
+
+      desc peminjaman_buku;
 
 
 ![image](https://github.com/MrIceAreBee11/Tugas-02---Implementasi-Basis-Data-SQL-Command-/assets/121444978/e571f79a-a8d9-4b69-ba60-f84cdcda6bdd)
