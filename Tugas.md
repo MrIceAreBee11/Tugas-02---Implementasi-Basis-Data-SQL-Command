@@ -10,7 +10,7 @@
 
 ** BUATLAH PERINTAH SQL**
 
-===================================================================CREATE TABLE===================================================================
+============================*CREATE TABLE*============================
 
 
     CREATE TABLE Buku (
@@ -26,37 +26,37 @@
         Nama VARCHAR(100)
     );
 
-CREATE TABLE Pustakawan (
-    NIK INT PRIMARY KEY,
-    Nama VARCHAR(100) NOT NULL,
-    Jenis_Kelamin VARCHAR(20),
-    Alamat VARCHAR(255),
-    Email VARCHAR(100),
-    Username VARCHAR(50),
-    Password VARCHAR(50)
-);
+      CREATE TABLE Pustakawan (
+          NIK INT PRIMARY KEY,
+          Nama VARCHAR(100) NOT NULL,
+          Jenis_Kelamin VARCHAR(20),
+          Alamat VARCHAR(255),
+          Email VARCHAR(100),
+          Username VARCHAR(50),
+          Password VARCHAR(50)
+      );
+      
+      CREATE TABLE Anggota (
+          NIK INT PRIMARY KEY,
+          Nama VARCHAR(100) NOT NULL,
+          Jenis_Kelamin VARCHAR(20),
+          Alamat VARCHAR(255),
+          Email VARCHAR(100),
+          Username VARCHAR(50),
+          Password VARCHAR(50)
+      );
 
-CREATE TABLE Anggota (
-    NIK INT PRIMARY KEY,
-    Nama VARCHAR(100) NOT NULL,
-    Jenis_Kelamin VARCHAR(20),
-    Alamat VARCHAR(255),
-    Email VARCHAR(100),
-    Username VARCHAR(50),
-    Password VARCHAR(50)
-);
+      CREATE TABLE Peminjaman_Buku (
+          NIK INT,
+          Nama_Peminjam VARCHAR(100),
+          Judul_Buku VARCHAR(255),
+          Tanggal_Pinjam DATE,
+          Tanggal_Kembali DATE,
+          Status_Keterlambatan BOOLEAN,
+          Denda INT
+      );
 
-CREATE TABLE Peminjaman_Buku (
-    NIK INT,
-    Nama_Peminjam VARCHAR(100),
-    Judul_Buku VARCHAR(255),
-    Tanggal_Pinjam DATE,
-    Tanggal_Kembali DATE,
-    Status_Keterlambatan BOOLEAN,
-    Denda INT
-);
-
-===================================================================DESCRIBE TABLE===================================================================
+============================*DESCRIBE TABLE*============================
 
 
 
@@ -96,14 +96,14 @@ CREATE TABLE Peminjaman_Buku (
 
 
 
-=================================================INSERT INTO TABLE (masing-masing table 1 value)====================================================
+============================*INSERT INTO TABLE (masing-masing table 1 value*============================
 
 
 *Buku*
 
 
-INSERT INTO Buku (KodeISBN, Judul, Penulis, Penerbit, Tahun_Terbit)
-VALUES (12345678, 'Buku Panduan Guru Cerdas Cergas Berbahasa dan Bersastra Indonesia untuk SMA/SMK Kelas XI', 'Heny Marwati & K. Waskitaningtyas', 'Pusat Kurikulum dan Perbukuan', 2021);
+      INSERT INTO Buku (KodeISBN, Judul, Penulis, Penerbit, Tahun_Terbit)
+      VALUES (12345678, 'Buku Panduan Guru Cerdas Cergas Berbahasa dan Bersastra Indonesia untuk SMA/SMK Kelas XI', 'Heny Marwati & K. Waskitaningtyas', 'Pusat Kurikulum dan Perbukuan', 2021);
 
 
 
@@ -111,8 +111,8 @@ VALUES (12345678, 'Buku Panduan Guru Cerdas Cergas Berbahasa dan Bersastra Indon
 *Kategori*
 
 
-INSERT INTO Genre (ID_Genre, Nama)
-VALUES (4, 'Bahasa');
+      INSERT INTO Genre (ID_Genre, Nama)
+      VALUES (4, 'Bahasa');
 
 
 
@@ -120,8 +120,8 @@ VALUES (4, 'Bahasa');
 *Anggota*
 
 
-INSERT INTO Anggota (NIK, Nama, Jenis_Kelamin, Alamat, Email, Username, Password)
-VALUES (1301212244, 'Megawati Hangestri Pertiwi', 'Perempuan', 'Kabupaten Jember', 'megatron08@email.com', 'megatron08', 'soultry08');
+      INSERT INTO Anggota (NIK, Nama, Jenis_Kelamin, Alamat, Email, Username, Password)
+      VALUES (1301212244, 'Megawati Hangestri Pertiwi', 'Perempuan', 'Kabupaten Jember', 'megatron08@email.com', 'megatron08', 'soultry08');
 
 
 
@@ -129,8 +129,8 @@ VALUES (1301212244, 'Megawati Hangestri Pertiwi', 'Perempuan', 'Kabupaten Jember
 *Pustakawan*
 
 
-INSERT INTO Pustakawan (NIK, Nama, Jenis_Kelamin, Alamat, Email, Username, Password)
-VALUES (1301212251, 'Muhammad Ramadhan Sananta', 'Laki-laki', 'Kepulauan Riau', 'sananta09@email.com', 'snanta09', 'soul09');
+      INSERT INTO Pustakawan (NIK, Nama, Jenis_Kelamin, Alamat, Email, Username, Password)
+      VALUES (1301212251, 'Muhammad Ramadhan Sananta', 'Laki-laki', 'Kepulauan Riau', 'sananta09@email.com', 'snanta09', 'soul09');
 
 
 
@@ -138,14 +138,13 @@ VALUES (1301212251, 'Muhammad Ramadhan Sananta', 'Laki-laki', 'Kepulauan Riau', 
 *Peminjaman Buku*
 
 
-INSERT INTO Peminjaman_Buku (NIK, Nama_Peminjam, Judul_Buku, Tanggal_Pinjam, Tanggal_Kembali, Status_Keterlambatan, Denda)
-VALUES (1301212244, 'Megawati Hangestri Pertiwi', 'Buku Panduan Guru Cerdas Cergas Berbahasa dan Bersastra Indonesia untuk SMA/SMK Kelas XI', '2023-10-29', '2023-11-01', false, 0);
+      INSERT INTO Peminjaman_Buku (NIK, Nama_Peminjam, Judul_Buku, Tanggal_Pinjam, Tanggal_Kembali, Status_Keterlambatan, Denda)
+      VALUES (1301212244, 'Megawati Hangestri Pertiwi', 'Buku Panduan Guru Cerdas Cergas Berbahasa dan Bersastra Indonesia untuk SMA/SMK Kelas XI', '2023-10-29', '2023-11-01', false, 0);
 
 
 
 
-===================================================================SELECT * FROM===================================================================
-
+============================*SELECT * FROM*============================
 
 *Buku*
 
