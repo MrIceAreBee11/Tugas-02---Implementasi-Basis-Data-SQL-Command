@@ -9,7 +9,9 @@
         Judul VARCHAR(255) NOT NULL,
         Penulis VARCHAR(100),
         Penerbit VARCHAR(100),
-        Tahun_Terbit INT
+        Tahun_Terbit INT,
+        ID_Genre INT,
+        CONSTRAINT FK_ID_Genre FOREIGN KEY (ID_GENRE) REFERENCES Kategori(ID_Genre)
     );
 
     CREATE TABLE Kategori (
@@ -18,8 +20,8 @@
     );
 
       CREATE TABLE Pustakawan (
-          NIK INT PRIMARY KEY,
-          Nama VARCHAR(100) NOT NULL,
+          ID_Pustakawan INT PRIMARY KEY,
+          Nama_Pustakawan VARCHAR(100) NOT NULL,
           Jenis_Kelamin VARCHAR(20),
           Alamat VARCHAR(255),
           Email VARCHAR(100),
@@ -28,8 +30,8 @@
       );
       
       CREATE TABLE Anggota (
-          NIK INT PRIMARY KEY,
-          Nama VARCHAR(100) NOT NULL,
+          ID_Anggota INT PRIMARY KEY,
+          Nama_Anggota VARCHAR(100) NOT NULL,
           Jenis_Kelamin VARCHAR(20),
           Alamat VARCHAR(255),
           Email VARCHAR(100),
@@ -38,13 +40,17 @@
       );
 
       CREATE TABLE Peminjaman_Buku (
-          NIK INT,
+          PeminjamanID INT PRIMARY KEY,
+          ID_Anggota INT,
+          KodeISBN INT,
           Nama_Peminjam VARCHAR(100),
           Judul_Buku VARCHAR(255),
           Tanggal_Pinjam DATE,
           Tanggal_Kembali DATE,
           Status_Keterlambatan BOOLEAN,
-          Denda INT
+          Denda INT,
+          CONSTRAINT FK_ID_Anggota FOREIGN KEY (ID_Anggota) REFERENCES Anggota(ID_Anggota),
+          CONSTRAINT FK_KodeISBN FOREIGN KEY (KodeISBN) REFERENCES Buku(KodeISBN)
       );
 
 ============================*DESCRIBE TABLE*============================
